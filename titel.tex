@@ -1,0 +1,51 @@
+\setlength\tabcolsep{6.4pt}
+\renewcommand{\arraystretch}{2.5}
+
+\newcommand{\newrow}[2]{\begin{tabularx}{\textwidth}{@{}#1@{}}#2\end{tabularx}}
+\newcolumntype{?}{V{4}}
+\newgeometry{margin=0.5in}
+\begin{titlepage}
+	\centering\noindent
+	\begin{tabularx}{\linewidth}{?X?}
+		\hlineB{4}
+		\newrow{X}{
+			\centering\bf\huge
+			Laborprotokoll
+		}\\
+		\hlineB{4}
+		\newrow{c?X?X?X}{
+			\multirow{2}{*}{
+				 \centering
+				 \makecell{
+				 	\includegraphics[width=3cm]{htl.jpeg}\\
+				 	\bf Abteilung: Elektronik \&\\\bf Technische Informatik
+			 	}}
+			 & \makecell{\bf Übungsdatum:\\\Uebungsdatum} & \makecell{\bf Klasse:\\\Klasse} & \multicolumn{1}{c}{\multirow{2}{*}{
+				\makecell{\bf Name: \\ \theauthor}
+		 	}}\\\clineB{2-3}{4}
+			 & \makecell{\bf Abgabedatum:\\\Abgabedatum} &&\\
+		}\\
+		\hlineB{4}
+		\newrow{X?X?X}{
+			\makecell[l]{\\\bf Leitung:\\\Leitung\\\\} & \makecell[l]{\\\bf Fehlende:\\\Fehlende\\\\} & \makecell[l]{\\\bf Mitübende:\\\Mituebende\\\\}\\
+		}\\
+		\hlineB{4}
+		\newrow{X}{
+			\bf Übungsbezeichnung: \normalfont \Uebungsbezeichnung\\
+		}\\
+		\hlineB{4}
+		\newrow{X}{
+			\bf Geräteliste:\\
+		}\\
+		\hlineB{4}
+		\hskip-2.75mm\newrow{@{\hspace{2.75mm}}c|X|X|X|X}{
+			\bf Nr. & \bf Benennung & \bf Fabrikat & \bf Inventar Nr. & \bf Bemerkung\\
+			\hlineB{4}
+
+			\Geraete
+		}\\
+		\hlineB{4}
+	\end{tabularx}
+\end{titlepage}
+\afterpage{\aftergroup\restoregeometry}
+\renewcommand{\arraystretch}{1}

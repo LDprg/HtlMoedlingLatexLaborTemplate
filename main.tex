@@ -1,0 +1,78 @@
+\documentclass{article}
+
+\usepackage[ngerman]{babel}
+\usepackage[
+breaklinks=true,
+colorlinks=true,
+urlcolor=blue,
+linkcolor=black
+]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{utopia}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{relsize}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{biblatex}
+\usepackage{tabularx}
+\usepackage{multirow,bigstrut}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{boldline}
+\usepackage{makecell}
+\usepackage{arrayjobx}
+\usepackage{cellspace}
+\usepackage{pgffor}
+\usepackage{geometry}
+\usepackage{afterpage}
+\usepackage{lipsum}
+\usepackage{varwidth}
+\usepackage{csquotes}
+\usepackage{amsmath}
+
+\usepackage{matheasy}
+
+\graphicspath{ {./img/} }
+
+\pagestyle{fancy}
+% no identation
+\setlength\parindent{0pt}
+
+\newcommand*{\quelle}{%
+	\footnotesize Quelle:
+}
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+\counterwithin{equation}{section}
+\begin{document}
+	\include{def}
+
+	% set doc info
+	\title{\Uebungsbezeichnung}
+	\author{\Name}
+	\date{\Uebungsdatum}
+
+	% set header
+	\lhead{\Uebungsbezeichnung}
+
+	% set footer
+	\lfoot{\theauthor}
+	\cfoot{\thepage\ von \pageref{LastPage}}
+	\rfoot{\thedate}
+
+	\include{titel}
+
+	\newpage
+	\tableofcontents
+	\newpage
+
+	\include{data}
+\end{document}
